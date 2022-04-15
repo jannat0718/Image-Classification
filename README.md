@@ -1,2 +1,7 @@
-# Image-Classification
-Image classification coding projects using CNN
+# Image-Classification,Captioning,Object detection practice projects
+
+Image classification coding projects 
+
+Image captioning
+
+Object detection
