@@ -28,37 +28,51 @@ Ten sample images, downloded from google, were processed using both pre-trained 
 
         a. Load the input image: Used the cv2.imread() function to load the input image.
 
-        b. Resize the input image: Resized the input image to the appropriate dimensions, usually (224, 224), using the cv2.resize() function.
+        b. Resize the input image: Resized the input image to the appropriate dimensions, usually (224, 224),
+        using the cv2.resize() function.
 
         c. Display the input image: Used the cv2_imshow() function to display the input image.
 
-        d. Convert the image to an array: Used the image.img_to_array() function to convert the input image to a numpy array.
+        d. Convert the image to an array: Used the image.img_to_array() function to convert the input image 
+        to a numpy array.
 
-        e. Expand the dimensions of the image array: Used the np.expand_dims() function to expand the dimensions of the image array.
+        e. Expand the dimensions of the image array: Used the np.expand_dims() function to expand the dimensions
+        of the image array.
 
-        f. Preprocess the input image: Preprocessd the input image according to the requirements of each model. Used the preprocess_input() function to perform the   preprocessing.
+        f. Preprocess the input image: Preprocessd the input image according to the requirements of each model.
+        Used the preprocess_input()
+        function to perform the   preprocessing.
 
-        g. Make predictions: Passed the preprocessed input image to both the ResNet50 and VGG16 models using the predict() method.
+        g. Make predictions: Passed the preprocessed input image to both the ResNet50 and VGG16 models using the
+        predict() method.
 
-        h. Decode predictions: Decoded the predictions obtained from the models using the decode_predictions() function to retrieve the top predicted classes and their corresponding probabilities.
+        h. Decode predictions: Decoded the predictions obtained from the models using the decode_predictions()
+        function to retrieve the
+        top predicted classes and their corresponding probabilities.
 
         i. Print the predictions: Printed the predictions to compare the results obtained from both models.
 
-5. Analyze and compare the results: Analyzed the results obtained from both ResNet50 and VGG16 models to determine which model performs better for your specific use case. I compared the results based on accuracy, speed, or any other relevant metric.
+5. Analyze and compare the results: Analyzed the results obtained from both ResNet50 and VGG16 models to determine which model performs
+better for your specific use case. I compared the results based on accuracy, speed, or any other relevant metric.
 
 **Performance Comparisions:**
 
-Comparing the performance of ResNet50 and VGG16 on the given sample images, I observed some differences in their predictions. However, it is important to note that the sample size is small, and a comprehensive comparison should include a larger dataset.
+Comparing the performance of ResNet50 and VGG16 on the given sample images, I observed some differences in their predictions. However,
+it is important to note that the sample size is small, and a comprehensive comparison should include a larger dataset.
 
 **ResNet50:**
 
-* Provides more diverse and specific predictions. For example, it differentiates between different dog breeds (Afghan_hound, Bedlington_terrier, otterhound) in the first image.
+* Provides more diverse and specific predictions. For example, it differentiates between different dog breeds (Afghan_hound, 
+Bedlington_terrier, otterhound) in the first image.
 * In some cases, ResNet50 gives more accurate predictions, like in the fifth image, where it accurately identifies an African elephant.
 
 **VGG16:**
 
-* In some instances, VGG16 provides a more accurate prediction. For example, in the second image, it recognizes a vestment, vase, and shower cap, while ResNet50 predicts tabby, poncho, and birdhouse.
-* In other cases, VGG16's predictions seem less accurate or less specific compared to ResNet50. For example, in the fourth image, it predicts axolotl (an amphibian) as the second-highest probability, which seems less plausible than ResNet50's prediction of borzoi (a dog breed).
+* In some instances, VGG16 provides a more accurate prediction. For example, in the second image, it recognizes a vestment, vase, and
+shower cap, while ResNet50 predicts tabby, poncho, and birdhouse.
+* In other cases, VGG16's predictions seem less accurate or less specific compared to ResNet50. For example, in the fourth image, it
+predicts axolotl (an amphibian) as the second-highest probability, which seems less plausible than ResNet50's prediction of borzoi 
+(a dog breed).
 
 **Conclusion:**
 
